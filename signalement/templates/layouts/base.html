@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Signalement ESPCI - {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}"/>
+    {% block css %}{% endblock %}
+</head>
+<body>
+
+{% block header %}
+<header>
+    <a href="/" id="header-link"><img src="{{url_for('static', filename='img/espci.png') }}" alt="logo espci Paris PSL"/>
+        <div id="header-title">Signalement</div></a>
+</header>
+{% endblock %}
+<div id="content">
+{% block content %}
+
+{% endblock %}
+</div>
+<footer>
+    <p>© 2021 BDE ESPCI Paris PSL - Fait par Louis Grandvaux</p>
+</footer>
+</body>
+{% block js %}{% endblock %}
+</html>

@@ -1,0 +1,85 @@
+# English translations for PROJECT.
+# Copyright (C) 2021 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2021-07-09 09:44+0200\n"
+"PO-Revision-Date: 2021-07-09 09:45+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: templates/index.html:7
+msgid "Bienvenue sur le portail de signalement de l'ESPCI Paris PSL"
+msgstr ""
+
+#: templates/index.html:9
+msgid ""
+"Conformément à nos règles éthiques et aux dispositions légales en vigueur"
+" la présente plateforme permet des signalements et des échanges sécurisés"
+" et est accessible à nos élèves."
+msgstr ""
+
+#: templates/index.html:13
+msgid "IMPORTANT"
+msgstr ""
+
+#: templates/index.html:16
+msgid ""
+"Vous avez la possibilité de reporter ici, l'existence de conduites ou de "
+"situations contraires à l'intérêt général et dont vous avez eu "
+"personnellement connaissance ou dont vous avez été témoin."
+msgstr ""
+
+#: templates/index.html:17
+msgid ""
+"<b>La confidentialité de votre identité</b> sera préservée lors de "
+"l'émission de votre signalement, ainsi que durant toute la procédure de "
+"traitement de l'alerte."
+msgstr ""
+
+#: templates/index.html:22
+msgid "Faire un nouveau signalement"
+msgstr ""
+
+#: templates/index.html:23
+msgid "Accéder à un signalement existant"
+msgstr ""
+
+#: templates/index.html:28
+msgid "À SAVOIR"
+msgstr ""
+
+#: templates/index.html:31
+msgid ""
+"Chaque signalement dispose de son propre système de discussion permettant"
+" d'envoyer et de recevoir des messages. Ces échanges respectent le choix "
+"des déclarant(e)s <b>s'ils ont souhaité rester anonymes"
+msgstr ""
+
+#: templates/index.html:32
+msgid ""
+"L'école a désigné des référent(e)s formé(e)s aux traitements des "
+"différents types de signalement, seuls ces référent(e)s désigné(e)s "
+"seront destinataires des informations que vous allez leur adresser par le"
+" biais de la plateforme. Vous aurez la possibilité de suivre votre "
+"signalement et de communiquer avec le/les référent(es) grâce au code "
+"confidentiel généré par la plateforme lors de la transmission de votre "
+"signalement, <b>ce code sera à conserver</b>"
+msgstr ""
+
+#: templates/index.html:33
+msgid ""
+"<b>Tout signalement fera l'objet d'une analyse rigoureuse et d'un audit "
+"interne détaillé"
+msgstr ""
+
