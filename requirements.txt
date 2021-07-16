@@ -3,6 +3,7 @@ Flask-Login
 Flask-SQLAlchemy
 Flask-Babel
 Flask-WTF
+Flask-Migrate
 WTForms-Alchemy
 phonenumbers
 mysql-connector-python

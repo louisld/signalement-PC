@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from flask_migrate import Migrate
 
 from signalement.config import DefaultConfig
 from signalement.user import User
@@ -17,6 +18,7 @@ def create_app(config=None, app_name=None):
     configure_hook(app)
     configure_blueprints(app)
     configure_extensions(app)
+    create_migrate(app)
     configure_logging(app)
     configure_template_filters(app)
     configure_error_handlers(app)
@@ -24,8 +26,15 @@ def create_app(config=None, app_name=None):
 
     return app
 
+
+def create_migrate(app):
+    migrate = Migrate(app, db)
+    return migrate
+
+
 def configure_app(app, config=None):
     app.config.from_object(DefaultConfig)
+
 
 def configure_extensions(app):
     # flask-sqlaclhemy
@@ -47,21 +56,25 @@ def configure_extensions(app):
     def get_locale():
         return
 
+
 def configure_blueprints(app):
 
     from signalement.user import user
     from signalement.frontend import frontend
 
-    for bp in  [user, frontend]:
+    for bp in [user, frontend]:
         app.register_blueprint(bp)
+
 
 def configure_template_filters(app):
     pass
+
 
 def configure_logging(app):
 
     if app.debug or app.testing:
         return
+
 
 def configure_hook(app):
 
@@ -69,11 +82,13 @@ def configure_hook(app):
     def before_request():
         pass
 
+
 def configure_error_handlers(app):
 
     @app.errorhandler(404)
     def page_not_found(error):
         return render_template("errors/404.html")
+
 
 def configure_cli(app):
 

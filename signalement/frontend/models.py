@@ -121,3 +121,7 @@ class Signalement(db.Model):
         info={"label": _("Si vous avez répondu « oui » à la question précédente n’hésitez pas à nous préciser les modalités de prise de contact privilégié et les horaires souhaités.")},
         nullable=True
     )
+    numero_suivi = Column(
+        db.String(36),
+        unique=True
+    )
