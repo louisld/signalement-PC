@@ -1,0 +1,24 @@
+{% extends 'layouts/base.html' %}
+
+{% set page_title = _('Signalement enregistré') %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/signalement/confirmation.css') }}"/>
+{% endblock %}
+
+{% block content %}
+
+<h2>{{ _("Votre signalement a bien été enregistré.") }}</h2>
+
+<p>{{ _("Votre numéro de suivi est :") }}</p>
+<div class="numero-suivi-wrapper">
+    <div class="numero-suivi">
+        {{ numero_suivi }}
+    </div>
+</div>
+
+<p><b>{{ _("Veuillez gardez précieusement ce numéro, il vous permettra d'accéder à votre signalement dans le futur.") }}</b></p>
+
+<p>{{ _("Retournez à l'accueil ") }} <a href="{{url_for('frontend.home')}}">{{ _("ici") }}</a>.</p>
+
+{% endblock %}

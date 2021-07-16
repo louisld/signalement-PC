@@ -1,0 +1,16 @@
+:root{
+    --pantone-281: #152F4E;
+    --pantone-2915: #64B9E9;
+    --pantone-192: #E40046;
+    --pantone-178: #FF585D;
+}
+.numero-suivi-wrapper {
+    display: flex;
+    justify-content: center;
+}
+.numero-suivi {
+    font-size: 1.3em;
+    border-radius: 5px;
+    border: 2px solid var(--pantone-192);
+    padding: 10px;
+}
