@@ -1,6 +1,6 @@
 from flask_babel import lazy_gettext as _
 from wtforms_alchemy import model_form_factory
-from wtforms import FileField, BooleanField
+from wtforms import FileField, BooleanField, StringField, SubmitField
 from flask_wtf import FlaskForm
 from werkzeug.utils import secure_filename
 from signalement.extensions import db
@@ -27,3 +27,7 @@ class SForm(ModelForm):
     def validate_fichier(form, field):
         if field.data:
             field.data = secure_filename(field.data)
+
+class AccesForm(FlaskForm):
+    numero_suivi = StringField(_("Numéro de suivi :"))
+    acceder = SubmitField(_("Accéder"))

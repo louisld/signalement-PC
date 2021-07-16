@@ -1,0 +1,23 @@
+{% extends 'layouts/base.html' %}
+
+{% set page_title = _('Accéder à un signalement') %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/signalement/suivi.css') }}"/>
+{% endblock %}
+
+{% block content %}
+
+<h2>{{ _("Accès à un signalement enregistré") }}</h2>
+
+<p>{{ _("Pour accéder à un signalement, vous avez besoin du numéro de signalement qui vous a été donné à la fin de l'enregistrement de celui-ci.") }}</p>
+
+<div class="acces-form-wrapper">
+    <form action="{{ url_for('frontend.suivi') }}" method="post">
+        {{form.numero_suivi.label}}
+        {{form.numero_suivi}}
+        {{form.acceder}}
+    </form>
+</div>
+
+{% endblock %}

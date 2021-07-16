@@ -24,7 +24,7 @@
 
 <div class="signalement-buttons">
     <a href="#" id="new-signalement">{{ _("Faire un nouveau signalement") }}</a>
-    <a href="#">{{ _("Accéder à un signalement existant") }}</a>
+    <a href="{{ url_for('frontend.suivi')}}">{{ _("Accéder à un signalement existant") }}</a>
 </div>
 
 <div class="box">
@@ -54,7 +54,7 @@
             </ul></p>
         </div>
         <div class="ns-modal-footer">
-            <a id="ns-modal-OK" href="/signalement">{{ _("Accepter") }}</a>
+            <a id="ns-modal-OK" href="{{ url_for('frontend.signalement') }}">{{ _("Accepter") }}</a>
             <a id="ns-modal-dismiss" href="#">{{ _("Fermer") }}</a>
         </div>
     </div>
