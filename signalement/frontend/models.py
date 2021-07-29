@@ -1,3 +1,5 @@
+import datetime
+
 from sqlalchemy import Column
 from flask_babel import lazy_gettext as _
 from sqlalchemy_utils import EmailType, PhoneNumberType, ChoiceType
@@ -124,4 +126,8 @@ class Signalement(db.Model):
     numero_suivi = Column(
         db.String(36),
         unique=True
+    )
+    date_signalement = Column(
+        db.DateTime(),
+        default=datetime.datetime.utcnow
     )
