@@ -131,3 +131,7 @@ class Signalement(db.Model):
         db.DateTime(),
         default=datetime.datetime.utcnow
     )
+    statut = Column(
+        db.Integer(),
+        default=0
+    )

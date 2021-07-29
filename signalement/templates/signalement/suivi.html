@@ -10,10 +10,19 @@
 
 <h2>{{ _("Accès à un signalement enregistré") }}</h2>
 
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div class="flash-error">
+        {{ messages[0] }}
+        </div>
+    {% endif %}
+{% endwith %}
+
 <p>{{ _("Pour accéder à un signalement, vous avez besoin du numéro de signalement qui vous a été donné à la fin de l'enregistrement de celui-ci.") }}</p>
 
 <div class="acces-form-wrapper">
     <form action="{{ url_for('frontend.suivi') }}" method="post">
+        {{ form.csrf_token }}
         {{form.numero_suivi.label}}
         {{form.numero_suivi}}
         {{form.acceder}}

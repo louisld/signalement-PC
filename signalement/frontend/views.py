@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, current_app, request, flash, \
         url_for, redirect, session, abort
+from flask_babel import lazy_gettext as _
 from uuid import uuid4
 
 from signalement.extensions import db
@@ -31,7 +32,10 @@ def signalement():
 def suivi():
     accesForm = AccesForm()
     if accesForm.validate_on_submit():
-        numero_suivi = accesForm.numero_suivi.data
-        Signalement.query.filter_by(numero_suivi=numero_suivi)
-        return
+        numero_suivi = accesForm.numero_suivi.data.lstrip()
+        signalement = Signalement.query.filter_by(numero_suivi=numero_suivi).first()
+        if signalement is not None:
+            return render_template('signalement/suivi_informations.html', signalement=signalement)
+        flash(_("Ce signalement n'a pas été trouvé dans la base de donnée."))
+        return render_template('signalement/suivi.html', form=accesForm)
     return render_template('signalement/suivi.html', form=accesForm)

@@ -1,0 +1,26 @@
+{% extends 'layouts/base.html' %}
+
+{% set page_title = _('Détail du signalement') %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/signalement/suivi.css') }}"/>
+{% endblock %}
+
+{% block content %}
+
+<div class="sf-recap"><b>{{ _("Catégorie")}} :</b> <span class="sf-recap-text">{{ signalement.categorie }}</span></div>
+<div class="sf-recap"><b>{{ _("Sous-catégorie")}} :</b> <span class="sf-recap-text">{{ signalement.sous_categorie }}</span></div>
+<div class="sf-recap"><b>{{ _("Nom")}} :</b> <span class="sf-recap-text">{{ signalement.nom }}</span></div>
+<div class="sf-recap"><b>{{ _("Prénom")}} :</b> <span class="sf-recap-text">{{ signalement.prenom }}</span></div>
+<div class="sf-recap"><b>{{ _("Email")}} :</b> <span class="sf-recap-text">{{ signalement.email }}</span></div>
+<div class="sf-recap"><b>{{ _("Téléphone")}} :</b> <span class="sf-recap-text">{{ signalement.telephone }}</span></div>
+<div class="sf-recap"><b>{{ _("Quelle est votre préoccupation ?")}}</b> <span class="sf-recap-text">{{signalement.preoccupation }}</span></div>
+<div class="sf-recap"><b>{{ _("À quelle date se sont déroulés les faits ?")}}</b> <span class="sf-recap-text">{{signalement.date }}</span></div>
+<div class="sf-recap"><b>{{ _("Où se sont déroulés les faits ?")}}</b> <span class="sf-recap-text">{{ signalement.lieu }}</span></div>
+<div class="sf-recap"><b>{{ _("Décrivez précisement la situation ou les faits")}} :</b> <span class="sf-recap-text">{{ signalement.description }}</span></div>
+<div class="sf-recap"><b>{{ _("Y a-t-il eu des témoins / d’autres témoins de la situation ? Si oui, précisez leur identité si vous la connaissez")}} :</b> <span class="sf-recap-text">{{ signalement.temoin }}</span></div>
+<div class="sf-recap"><b>{{ _("Est-ce la première fois que cette situation est observée ?")}}</b> <span class="sf-recap-text">{{ signalement.premiere }}</span></div>
+<div class="sf-recap"><b>{{ _("Souhaitez-vous être recontacté par la référente écoute ?")}}</b> <span class="sf-recap-text">{{ signalement.recontact }}</span></div>
+<div class="sf-recap"><b>{{ _("Si vous avez répondu « oui » à la question précédente n’hésitez pas à nous préciser les modalités de prise de contact privilégié et les horaires souhaités.")}}</b> <span class="sf-recap-text">{{ signalement.modalite }}</span></div>
+
+{% endblock %}
