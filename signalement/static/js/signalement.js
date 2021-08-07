@@ -1,4 +1,5 @@
 var submit = document.getElementById("sf-submit");
+var previous = document.getElementById("sf-previous");
 var sfForm = document.getElementById("sf-form");
 var sf1 = document.getElementById("sf-1");
 var sf2 = document.getElementById("sf-2");
@@ -108,6 +109,10 @@ submit.addEventListener('click', function(e){
     window.scrollTo(0, 0);
 });
 
+previous.addEventListener('click', function() {
+    displayStep(step, step - 1);
+})
+
 /*
  * Mise à jour interactive du formaulaire
  */
@@ -203,5 +208,11 @@ function displayStep(currentStep, newStep) {
     sfStep[currentStep - 1].classList.remove("s-step-active");
     sfStep[newStep - 1].classList.add("s-step-active");
     sfErrors.style.display = "none";
+
+    if(newStep > 1)
+        previous.style.display = "block";
+    else
+        previous.style.display = "none";
+
     step = newStep;
 }

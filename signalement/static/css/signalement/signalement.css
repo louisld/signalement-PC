@@ -53,6 +53,11 @@
     margin-top: 30px;
     float: right;
 }
+.sf-previous {
+    margin-top: 30px;
+    float: left;
+    display: none;
+}
 @media (min-width: 768px) {
     .sf-label {
         width: 25%;
