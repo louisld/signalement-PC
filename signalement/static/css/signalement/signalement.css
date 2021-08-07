@@ -105,3 +105,6 @@
     font-size: 1.2em;
     margin: 10px 0;
 }
+#sf-desc span {
+    display: none;
+}

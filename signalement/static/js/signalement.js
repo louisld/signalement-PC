@@ -4,10 +4,12 @@ var sf1 = document.getElementById("sf-1");
 var sf2 = document.getElementById("sf-2");
 var sf3 = document.getElementById("sf-3");
 var sf4 = document.getElementById("sf-4");
+var sf = [sf1, sf2, sf3, sf4];
 var sfStep1 = document.getElementById("s-step-1");
 var sfStep2 = document.getElementById("s-step-2");
 var sfStep3 = document.getElementById("s-step-3");
 var sfStep4 = document.getElementById("s-step-4");
+var sfStep = [sfStep1, sfStep2, sfStep3, sfStep4];
 var sfErrors = document.getElementById("sf-errors")
 // Step 1
 var categorie = document.getElementById("categorie");
@@ -33,17 +35,15 @@ var confirmation = document.getElementById("confirmation");
 
 var step = 1;
 
+/*
+ * Prend en charge la validation de toutes les étapes du formulaire
+ */
 submit.addEventListener('click', function(e){
     e.preventDefault();
     if(step == 1) {
         var res = validateStep1();
         if(res[0]) {
-            sf1.style.display = "none";
-            sf2.style.display = "block";
-            sfStep1.classList.remove("s-step-active");
-            sfStep2.classList.add("s-step-active");
-            sfErrors.style.display = "none";
-            step = 2;
+            displayStep(1, 2);
         } else {
             sfErrors.innerHTML = res[1];
             sfErrors.style.display = "block";
@@ -51,12 +51,7 @@ submit.addEventListener('click', function(e){
     } else if(step == 2) {
         var res= validateStep2();
         if(res[0]) {
-            sf2.style.display = "none";
-            sf3.style.display = "block";
-            sfStep2.classList.remove("s-step-active");
-            sfStep3.classList.add("s-step-active");
-            sfErrors.style.display = "none";
-            step = 3;
+            displayStep(2, 3);
         } else {
             var er = "<ul>";
             for(message in res[1]) {
@@ -69,11 +64,8 @@ submit.addEventListener('click', function(e){
     } else if(step == 3) {
         var res = validateStep3();
         if(res[0]) {
-            sf3.style.display = "none";
-            sf4.style.display = "block";
-            sfStep3.classList.remove("s-step-active");
-            sfStep4.classList.add("s-step-active");
-            sfErrors.style.display = "none";
+            displayStep(3, 4);
+            // Remplissage des informations pour validation finale
             submit.innerHTML = "Valider";
             var sfRecap = sf4.getElementsByClassName("sf-recap");
             sfRecap[0].getElementsByClassName("sf-recap-text")[0].innerHTML = categorie.options[categorie.selectedIndex].text;
@@ -106,7 +98,6 @@ submit.addEventListener('click', function(e){
         }
     } else if(step == 4) {
         var res= validateStep4();
-        console.log(res);
         if(res[0]) {
             sfForm.submit();
         } else {
@@ -116,15 +107,34 @@ submit.addEventListener('click', function(e){
     }
     window.scrollTo(0, 0);
 });
-// Step 1
+
+/*
+ * Mise à jour interactive du formaulaire
+ */
 categorie.addEventListener('change', function() {
     if(this.selectedIndex == 1) {
         sfCat.style.display = 'flex';
     } else {
         sfCat.style.display = 'none';
     }
+    update_sCat_desc();
 });
 
+sous_categorie.addEventListener('change', update_sCat_desc);
+
+function update_sCat_desc() {
+    var index = sous_categorie.selectedIndex
+    var sfDescChildren = document.getElementById("sf-desc").children;
+    for(var i = 0; i < sfDescChildren.length; i++) {
+        sfDescChildren[i].style.display = "none";
+    }
+    sfDescChildren[index].style.display = "inline";
+}
+
+/*
+ * Fonctions de validations des étapes du formualaires
+ * @returns {Array} Le premier élément est un booléen qui indique si le formulaire est valide, les suivants indiquants les erreurs éventuelles.
+ */
 function validateStep1() {
     if(categorie.selectedIndex == 0)
         return [false, ["Veuillez choisir une catégorie."]];
@@ -180,4 +190,18 @@ function validateStep4() {
     if(confirmation.checked)
         return [true];
     return [false, "Vous devez confirmer ces informations."];
+}
+
+/*
+ * Fonction d'affichages des étapes du formulaire.
+ * @param {number} L'étape actuelle du formulaire.
+ * @param {number} L'étape que l'on veut afficher.
+ */
+function displayStep(currentStep, newStep) {
+    sf[currentStep - 1].style.display = "none";
+    sf[newStep - 1].style.display = "block";
+    sfStep[currentStep - 1].classList.remove("s-step-active");
+    sfStep[newStep - 1].classList.add("s-step-active");
+    sfErrors.style.display = "none";
+    step = newStep;
 }
