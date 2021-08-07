@@ -64,7 +64,10 @@
                 <div class="sf-input">{{form.telephone}}</div>
             </div>
             <div class="sf-group-cb">
-                {{form.anonyme}}{{form.anonyme.label}}<img class="sf-question" src="{{ url_for('static', filename='img/question.png')}}"/>
+                {{form.anonyme}}{{form.anonyme.label}}
+            </div>
+            <div>
+                {{ _("desc_anonymat") }}
             </div>
         </div>
         <div id="sf-3">

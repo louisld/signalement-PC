@@ -21,6 +21,7 @@ var nom = document.getElementById("nom");
 var prenom = document.getElementById("prenom");
 var email = document.getElementById("email");
 var telephone = document.getElementById("telephone");
+var anonyme = document.getElementById("anonyme");
 // Step 3
 var preoccupation = document.getElementById("preocupation");
 var date = document.getElementById("date");
@@ -147,25 +148,29 @@ function validateStep1() {
 }
 
 function validateStep2() {
-    retour = true
-    messages = []
-    if(nom.value == "") {
-        messages.push("Veuillez indiquer un nom.");
-        retour = false;
-    }
-    if(prenom.value == "") {
-        messages.push("Veuillez indiquer un prénom.");
-        retour = false;
-    }
-    if(email.value == "") {
-        // TODO : Vérification mail
-        messages.push("Veuillez indiquer une adresse mail valide.");
-        retour = false;
-    }
-    if(!retour) {
-        return [false, messages];
+    if(!anonyme.checked) {
+        retour = true
+        messages = []
+        if(nom.value == "") {
+            messages.push("Veuillez indiquer un nom.");
+            retour = false;
+        }
+        if(prenom.value == "") {
+            messages.push("Veuillez indiquer un prénom.");
+            retour = false;
+        }
+        if(email.value == "") {
+            // TODO : Vérification mail
+            messages.push("Veuillez indiquer une adresse mail valide.");
+            retour = false;
+        }
+        if(!retour) {
+            return [false, messages];
+        } else {
+            return [true];
+        }
     } else {
-        return [true]
+        return [true];
     }
 }
 

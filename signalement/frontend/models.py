@@ -44,17 +44,17 @@ class Signalement(db.Model):
     nom = Column(
         db.String(255),
         info={"label": _("Nom*")},
-        nullable=False
+        nullable=True
     )
     prenom = Column(
         db.String(255),
         info={"label": _("Prénom*")},
-        nullable=False
+        nullable=True
     )
     email = Column(
         EmailType,
         info={"label": _("Email*")},
-        nullable=False
+        nullable=True
     )
     telephone = Column(
         PhoneNumberType,
