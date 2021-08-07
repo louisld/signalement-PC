@@ -1,0 +1,42 @@
+:root{
+    --pantone-281: #152F4E;
+    --pantone-2915: #64B9E9;
+    --pantone-192: #E40046;
+    --pantone-178: #FF585D;
+}
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    border: 2px solid var(--pantone-281);
+    padding: 10px;
+}
+.auth-form fieldset {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+}
+.auth-form .submit input{
+    float: right;
+    background-color: var(--pantone-2915);
+    border-color: var(--pantone-281);
+    color: white;
+    border-radius: 5px;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+@media (min-width: 350px) {
+    .auth-form{
+        width: 350px;
+    }
+}
+.auth-error {
+    background-color: var(--pantone-178);
+    border: 1px solid var(--pantone-192);
+    border-radius: 5px;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}

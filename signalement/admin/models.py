@@ -7,7 +7,8 @@ from flask_login import UserMixin
 
 from signalement.extensions import db
 from signalement.utils import get_current_time
-from signalement.constants import *
+from signalement.constants import ADMIN, MODO, USER_ROLE
+
 
 class User(db.Model, UserMixin):
 
@@ -46,7 +47,7 @@ class User(db.Model, UserMixin):
     @classmethod
     def authenticate(cls, login, password):
         user = cls.query.filter(db.or_(
-            USer.name == login, User.email == login)).first()
+            User.name == login, User.email == login)).first()
 
         if user:
             authenticated = user.check_password(password)

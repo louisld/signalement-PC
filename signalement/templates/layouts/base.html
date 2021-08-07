@@ -13,6 +13,7 @@
 <header>
     <a href="/" id="header-link"><img src="{{url_for('static', filename='img/espci.png') }}" alt="logo espci Paris PSL"/>
         <div id="header-title">{{ _("Signalement") }}</div></a>
+    {% block header_btn %}{% endblock %}
 </header>
 {% endblock %}
 <div id="content">
@@ -21,7 +22,8 @@
 {% endblock %}
 </div>
 <footer>
-    <p>© 2021 BDE ESPCI Paris PSL - Fait par Louis Grandvaux</p>
+    <span><a href="">À propos</a> - <a href="{{ url_for('admin.login') }}">Espace admin</a></span><div class="break"></div>
+    <span>© 2021 BDE ESPCI Paris PSL - Fait par Louis Grandvaux</span>
 </footer>
 </body>
 {% block js %}{% endblock %}

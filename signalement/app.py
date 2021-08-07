@@ -2,7 +2,7 @@ from flask import Flask, render_template
 from flask_migrate import Migrate
 
 from signalement.config import DefaultConfig
-from signalement.user import User
+from signalement.admin import User
 
 from signalement.extensions import db, login_manager, babel
 
@@ -41,8 +41,8 @@ def configure_extensions(app):
     db.init_app(app)
 
     # flask-login
-    login_manager.login_view = 'frontend.login'
-    login_manager.refresh_view = 'frontend.reauth'
+    login_manager.login_view = 'admin.login'
+    login_manager.refresh_view = 'admin.reauth'
 
     @login_manager.user_loader
     def load_user(id):
@@ -59,10 +59,11 @@ def configure_extensions(app):
 
 def configure_blueprints(app):
 
-    from signalement.user import user
+    # from signalement.user import user
     from signalement.frontend import frontend
+    from signalement.admin import admin
 
-    for bp in [user, frontend]:
+    for bp in [frontend, admin]:
         app.register_blueprint(bp)
 
 

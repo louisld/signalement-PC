@@ -1,0 +1,42 @@
+{% extends "layouts/base.html" %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename=('css/admin/auth.css'))}}">
+{% endblock %}
+
+{% block content %}
+    <form action="{{ url_for('admin.login')}}" method="post" class="auth-form">
+        {{ form.csrf_token }}
+        <h2>{{ _("log_in") }}</h2>
+
+        {% if get_flashed_messages() %}
+        <ul class="auth-error">{% for message in get_flashed_messages() %}
+            <li>{{ message }}</li>
+        {% endfor %}</ul>
+        {% endif %}
+
+        <fieldset class="userform">
+            {% if form.email.errors %}
+             <ul class="auth-error">
+               {% for error in form.email.errors %}
+                 <li>{{ error }}</li>{% endfor %}
+             </ul>
+           {% endif %}
+            {{ form.email.label }}
+            {{ form.email }}
+        </fieldset>
+        <fieldset class="userform">
+            {% if form.password.errors %}
+             <ul class="auth-error">
+               {% for error in form.password.errors %}
+                 <li>{{ error }}</li>{% endfor %}
+             </ul>
+           {% endif %}
+            {{ form.password.label }}
+            {{ form.password }}
+        </fieldset>
+        <div class="submit">
+            {{ form.submit }}
+        </div>
+    </form>
+{% endblock %}
