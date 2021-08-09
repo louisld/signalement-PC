@@ -1,0 +1,81 @@
+{% extends "layouts/base.html" %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin/dashboard.css')}}">
+{% endblock %}
+
+{% block content %}
+
+<h2>{{ _("dashboard_title")}}</h2>
+
+<div class="dashboard-new">
+
+    <h3>{{ _("dashboard_signalement_new") }}</h3>
+
+    <table class="dashboard-table dashboard-table-new">
+        <thead>
+            <tr>
+                <th>{{ _("dashboard-date") }}</th>
+                <th>{{ _("dashboard-sous-categorie") }}</th>
+                <th>{{ _("dashboard-preocupation")}}</th>
+                <th>{{ _("dashboard-date-fait") }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for signalement in signalements_new %}
+                <tr>
+                    <td>{{ signalement.date_signalement }}</td>
+                    <td>{{ signalement.sous_categorie }}</td>
+                    <td>{{ signalement.preocupation}}</td>
+                    <td>{{ signalement.date }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<div class="dashboard-open">
+    <h3>{{ _("dashboard_signalement_open") }}</h3>
+
+    <table class="dashboard-table dashboard-table-open">
+        <thead>
+            <tr>
+                <th>{{ _("dashboard-date") }}</th>
+                <th>{{ _("dashboard-date-fait") }}</th>
+                <th>{{ _("dashboard-sous-categorie") }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for signalement in signalements_open %}
+                <tr>
+                    <td>{{ signalement.date_signalement }}</td>
+                    <td>{{ signalement.date }}</td>
+                    <td>{{ signalement.sous_categorie }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<div class="dashboard-close">
+    <h3>{{ _("dashboard_signalement_close") }}</h3>
+
+    <table class="dashboard-table dashboard-table-close">
+        <thead>
+            <tr>
+                <th>{{ _("dashboard-date") }}</th>
+                <th>{{ _("dashboard-date-fait") }}</th>
+                <th>{{ _("dashboard-sous-categorie") }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for signalement in signalements_close %}
+                <tr>
+                    <td>{{ signalement.date_signalement }}</td>
+                    <td>{{ signalement.date }}</td>
+                    <td>{{ signalement.sous_categorie }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

@@ -1,10 +1,17 @@
 import datetime
+import enum
 
 from sqlalchemy import Column
 from flask_babel import lazy_gettext as _
 from sqlalchemy_utils import EmailType, PhoneNumberType, ChoiceType
 
 from signalement.extensions import db
+
+
+class SignalementStatut(enum.Enum):
+    new = enum.auto()
+    opened = enum.auto()
+    closed = enum.auto()
 
 
 class Signalement(db.Model):
@@ -133,6 +140,6 @@ class Signalement(db.Model):
         default=datetime.datetime.utcnow
     )
     statut = Column(
-        db.Integer(),
-        default=0
+        db.Enum(SignalementStatut),
+        default=SignalementStatut.new
     )

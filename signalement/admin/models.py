@@ -1,14 +1,10 @@
-from sqlalchemy import Column, desc
-from sqlalchemy.orm import backref
-
+from sqlalchemy import Column
 from werkzeug.security import generate_password_hash, check_password_hash
-
 from flask_login import UserMixin
 
 from signalement.extensions import db
 from signalement.utils import get_current_time
 from signalement.constants import ADMIN, MODO, USER_ROLE
-
 
 class User(db.Model, UserMixin):
 

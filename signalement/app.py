@@ -1,12 +1,15 @@
-from flask import Flask, render_template
+import datetime
+
+from flask import Flask, render_template, session, g
 from flask_migrate import Migrate
+from flask_login import current_user
 
 from signalement.config import DefaultConfig
-from signalement.admin import User
 
 from signalement.extensions import db, login_manager, babel
 
 __all__ = ['create_app']
+
 
 def create_app(config=None, app_name=None):
 
@@ -23,6 +26,13 @@ def create_app(config=None, app_name=None):
     configure_template_filters(app)
     configure_error_handlers(app)
     configure_cli(app)
+
+    @app.before_request
+    def before_request():
+        session.permanent = True
+        app.permanent_session_lifetime = datetime.timedelta(minutes=20)
+        session.modified = True
+        g.user = current_user
 
     return app
 
@@ -44,9 +54,6 @@ def configure_extensions(app):
     login_manager.login_view = 'admin.login'
     login_manager.refresh_view = 'admin.reauth'
 
-    @login_manager.user_loader
-    def load_user(id):
-        return User.query.get(id)
     login_manager.setup_app(app)
 
     # flask-babel
