@@ -42,6 +42,17 @@ def dashboard():
     return render_template('admin/dashboard.html', signalements_new=signalements_new)
 
 
+@admin.route('/signalement/<int:id>')
+@login_required
+def signalement(id):
+    signalement = Signalement.query.get(id)
+    if not signalement:
+        print("PAs vu")
+        flash(_("signalement-not-found"))
+        return redirect(url_for('admin.dashboard'))
+    return render_template('admin/signalement.html', signalement=signalement)
+
+
 @login_manager.user_loader
 def load_user(user_id):
     if user_id is not None:
