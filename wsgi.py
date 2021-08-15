@@ -1,8 +1,3 @@
-activate_this = "venv/bin/activate.py"
-with open(activate_this) as file:
-    exec(file.read(), dict(__file__=activate_this))
-
-
 import sys
 import os
 
