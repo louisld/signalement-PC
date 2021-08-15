@@ -249,28 +249,24 @@ msgid "Note importante"
 msgstr "Note importante"
 
 #: signalement/templates/index.html:50
-#, fuzzy
 msgid "index-note"
 msgstr ""
 "Veuillez noter que votre signalement doit être sérieux et factuel pour "
 "être recevable. "
 
 #: signalement/templates/index.html:51
-#, fuzzy
 msgid "index-note-2"
 msgstr ""
 "Il est important de relater avec exactitude et sincérité les faits "
 "constatés et les déclarations."
 
 #: signalement/templates/index.html:52
-#, fuzzy
 msgid "index-note-3"
 msgstr ""
 "Tout en maintenant une stricte confidentialité, toutes les alertes feront"
 " l'objet d'une enquète approfondie et d'un audit interne."
 
 #: signalement/templates/index.html:53
-#, fuzzy
 msgid "index-note-4"
 msgstr ""
 "À la fin de votre rapport, le système générera un code confidentiel que "

@@ -123,5 +123,5 @@ def configure_cli(app):
     @translate.command()
     def compile():
         """Compilation des traductions."""
-        if os.system('pybabel compile -d signalement/translations'):
+        if os.system('pybabel compile -f -d signalement/translations'):
             raise RuntimeError("Échec de la compilation des traductions.")
