@@ -26,13 +26,9 @@
         </div>
         <div id="sf-1">
             <h2>{{ _("Type de signalement") }}</h2>
-            <div class="sf-group">
+            <div class="sf-group" id="sf-cat">
                 <div class="sf-label">{{form.categorie.label}}</div>
                 <div class="sf-input">{{form.categorie}}</div>
-            </div>
-            <div class="sf-group" id="sf-cat">
-                <div class="sf-label">{{form.sous_categorie.label}}</div>
-                <div class="sf-input">{{form.sous_categorie}}</div>
             </div>
             <div id="sf-desc">
                 <span id="sf-desc-agression">{{ _("Description_agression") }}</span>
@@ -111,7 +107,6 @@
         <div id="sf-4">
             <h2>{{ _("Récapitulatif")}}</h2>
             <div class="sf-recap"><b>{{ _("Catégorie")}} :</b> <span class="sf-recap-text"></span></div>
-            <div class="sf-recap"><b>{{ _("Sous-catégorie")}} :</b> <span class="sf-recap-text"></span></div>
             <div class="sf-recap"><b>{{ _("Nom")}} :</b> <span class="sf-recap-text"></span></div>
             <div class="sf-recap"><b>{{ _("Prénom")}} :</b> <span class="sf-recap-text"></span></div>
             <div class="sf-recap"><b>{{ _("Email")}} :</b> <span class="sf-recap-text"></span></div>

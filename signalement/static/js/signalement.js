@@ -14,7 +14,6 @@ var sfStep = [sfStep1, sfStep2, sfStep3, sfStep4];
 var sfErrors = document.getElementById("sf-errors")
 // Step 1
 var categorie = document.getElementById("categorie");
-var sousCategorie = document.getElementById("sous_categorie");
 var sfCat = document.getElementById("sf-cat");
 // Step 2
 var nom = document.getElementById("nom");
@@ -71,22 +70,17 @@ submit.addEventListener('click', function(e){
             submit.innerHTML = "Valider";
             var sfRecap = sf4.getElementsByClassName("sf-recap");
             sfRecap[0].getElementsByClassName("sf-recap-text")[0].innerHTML = categorie.options[categorie.selectedIndex].text;
-            if(categorie.selectedIndex == 1) {
-                sfRecap[1].getElementsByClassName("sf-recap-text")[0].innerHTML = sous_categorie.options[sous_categorie.selectedIndex].text;
-            } else {
-                sfRecap[1].getElementsByClassName("sf-recap-text")[0].innerHTML = "NA";
-            }
-            sfRecap[2].getElementsByClassName("sf-recap-text")[0].innerHTML = nom.value;
-            sfRecap[3].getElementsByClassName("sf-recap-text")[0].innerHTML = prenom.value;
-            sfRecap[4].getElementsByClassName("sf-recap-text")[0].innerHTML = email.value;
-            sfRecap[5].getElementsByClassName("sf-recap-text")[0].innerHTML = telephone.value;
-            sfRecap[6].getElementsByClassName("sf-recap-text")[0].innerHTML = preoccupation.value;
-            sfRecap[7].getElementsByClassName("sf-recap-text")[0].innerHTML = date.value;
-            sfRecap[8].getElementsByClassName("sf-recap-text")[0].innerHTML = lieu.value;
-            sfRecap[9].getElementsByClassName("sf-recap-text")[0].innerHTML = description.value;
-            sfRecap[10].getElementsByClassName("sf-recap-text")[0].innerHTML = temoin.value;
-            sfRecap[11].getElementsByClassName("sf-recap-text")[0].innerHTML = premiere.options[premiere.selectedIndex].text;
-            sfRecap[12].getElementsByClassName("sf-recap-text")[0].innerHTML = recontact.options[recontact.selectedIndex].text;
+            sfRecap[1].getElementsByClassName("sf-recap-text")[0].innerHTML = nom.value;
+            sfRecap[2].getElementsByClassName("sf-recap-text")[0].innerHTML = prenom.value;
+            sfRecap[3].getElementsByClassName("sf-recap-text")[0].innerHTML = email.value;
+            sfRecap[4].getElementsByClassName("sf-recap-text")[0].innerHTML = telephone.value;
+            sfRecap[5].getElementsByClassName("sf-recap-text")[0].innerHTML = preoccupation.value;
+            sfRecap[6].getElementsByClassName("sf-recap-text")[0].innerHTML = date.value;
+            sfRecap[7].getElementsByClassName("sf-recap-text")[0].innerHTML = lieu.value;
+            sfRecap[8].getElementsByClassName("sf-recap-text")[0].innerHTML = description.value;
+            sfRecap[9].getElementsByClassName("sf-recap-text")[0].innerHTML = temoin.value;
+            sfRecap[10].getElementsByClassName("sf-recap-text")[0].innerHTML = premiere.options[premiere.selectedIndex].text;
+            sfRecap[11].getElementsByClassName("sf-recap-text")[0].innerHTML = recontact.options[recontact.selectedIndex].text;
             sfRecap[13].getElementsByClassName("sf-recap-text")[0].innerHTML = modalite.value;
             step = 4;
         } else {
@@ -115,21 +109,14 @@ previous.addEventListener('click', function() {
 })
 
 /*
- * Mise à jour interactive du formaulaire
+ * Mise à jour interactive du formulaire
  */
-categorie.addEventListener('change', function() {
-    if(this.selectedIndex == 1) {
-        sfCat.style.display = 'flex';
-    } else {
-        sfCat.style.display = 'none';
-    }
-    update_sCat_desc();
-});
 
-sous_categorie.addEventListener('change', update_sCat_desc);
+update_cat_desc();
+categorie.addEventListener('change', update_cat_desc);
 
-function update_sCat_desc() {
-    var index = sous_categorie.selectedIndex
+function update_cat_desc() {
+    var index = categorie.selectedIndex
     var sfDescChildren = document.getElementById("sf-desc").children;
     for(var i = 0; i < sfDescChildren.length; i++) {
         sfDescChildren[i].style.display = "none";
@@ -137,13 +124,32 @@ function update_sCat_desc() {
     sfDescChildren[index].style.display = "inline";
 }
 
+disable_fields();
+anonyme.addEventListener('change', disable_fields);
+
+function disable_fields() {
+    if(anonyme.checked) {
+        nom.disabled = true;
+        nom.value = "";
+        prenom.disabled = true;
+        prenom.value = "";
+        email.disabled = true;
+        email.value = "";
+        telephone.disabled = true;
+        telephone.value = "";
+    } else {
+        nom.disabled = false;
+        prenom.disabled = false;
+        email.disabled = false;
+        telephone.disabled = false;
+    }
+}
+
 /*
  * Fonctions de validations des étapes du formualaires
  * @returns {Array} Le premier élément est un booléen qui indique si le formulaire est valide, les suivants indiquants les erreurs éventuelles.
  */
 function validateStep1() {
-    if(categorie.selectedIndex == 0)
-        return [false, ["Veuillez choisir une catégorie."]];
     return [true];
 }
 

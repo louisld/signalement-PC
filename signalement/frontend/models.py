@@ -20,18 +20,8 @@ class Signalement(db.Model):
 
     id = Column(db.Integer, primary_key=True)
 
-    # Initialiser
-    categorie_choices = [
-        ("0", _("--Sélectionnez--")),
-        ("1", _("Je souhaite faire un signalement")),
-        ("2", _("Je souhaite prendre un rendez-vous avec la référente « écoute »"))
-    ]
-    categorie = Column(
-        ChoiceType(categorie_choices),
-        info={"label": _("Catégorie")}
-    )
     # Identifier
-    sous_categorie_choices = [
+    categorie_choices = [
         ("1", _("Agression sexuelle")),
         ("2", _("Viol")),
         ("3", _("Harcèlement moral")),
@@ -42,9 +32,9 @@ class Signalement(db.Model):
         ("8", _("Violences")),
         ("9", _("Je ne sais pas/ne veux pas catégoriser mon signalement"))
     ]
-    sous_categorie = Column(
-        ChoiceType(sous_categorie_choices),
-        info={"label": _("Sous-catégorie")},
+    categorie = Column(
+        ChoiceType(categorie_choices),
+        info={"label": _("Catégorie")},
         nullable=True
     )
     # Identifier

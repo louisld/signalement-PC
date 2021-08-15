@@ -49,6 +49,9 @@
 .sf-input input, .sf-input select, .sf-input textarea {
     width: 100%;
 }
+.sf-input input:disabled {
+    background-color: #CCCCCC;
+}
 .sf-submit {
     margin-top: 30px;
     float: right;
@@ -66,9 +69,6 @@
     .sf-input {
         width: 70%;
     }
-}
-#sf-cat {
-    display: none;
 }
 .sf-group-cb {
     display: flex;
