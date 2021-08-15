@@ -1,4 +1,5 @@
 import datetime
+import os
 
 from flask import Flask, render_template, session, g, request
 from flask_migrate import Migrate
@@ -100,7 +101,27 @@ def configure_error_handlers(app):
 
 def configure_cli(app):
 
+    # Initialisation de la base de donnée
     @app.cli.command()
     def initdb():
         db.drop_all()
         db.create_all()
+
+    # Commande pour la traduction
+    @app.cli.group()
+    def translate():
+        pass
+
+    @translate.command()
+    def update():
+        """Mise à jour des traductions."""
+        if os.system('pybabel extract -F signalement/babel.cfg -o signalement/messages.pot signalement/'):
+            raise RuntimeError("Échec de l'extraction des traductions.")
+        if os.system('pybabel update -i signalement/messages.pot -d signalement/translations'):
+            raise RuntimeError("Échec de la mise à jour des traductions.")
+
+    @translate.command()
+    def compile():
+        """Compilation des traductions."""
+        if os.system('pybabel compile -d signalement/translations'):
+            raise RuntimeError("Échec de la compilation des traductions.")
