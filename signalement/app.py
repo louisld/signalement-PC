@@ -1,6 +1,6 @@
 import datetime
 
-from flask import Flask, render_template, session, g
+from flask import Flask, render_template, session, g, request
 from flask_migrate import Migrate
 from flask_login import current_user
 
@@ -61,7 +61,7 @@ def configure_extensions(app):
 
     @babel.localeselector
     def get_locale():
-        return
+        return request.accept_languages.best_match(app.config["LANGUAGES"])
 
 
 def configure_blueprints(app):

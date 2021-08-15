@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, current_app, request, flash, \
-        url_for, redirect, session, abort
+        url_for, redirect, session, abort, g
 from flask_babel import lazy_gettext as _
 from uuid import uuid4
 

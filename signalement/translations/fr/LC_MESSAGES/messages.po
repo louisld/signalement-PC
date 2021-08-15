@@ -1,18 +1,19 @@
-# English translations for PROJECT.
-# Copyright (C) 2021 ORGANIZATION
-# This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# French translations for signalement-pc.
+# Copyright (C) 2021 BDE ESPCI
+# This file is distributed under the same license as the signalement-PC
+# project.
+# FIRST AUTHOR <Louis Grandvaux>, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-08-15 20:22+0200\n"
-"PO-Revision-Date: 2021-07-09 09:45+0200\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
-"Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"PO-Revision-Date: 2021-08-15 20:31+0200\n"
+"Last-Translator: \n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,28 +22,29 @@ msgstr ""
 #: admin/forms.py:15 templates/admin/signalement.html:7
 #: templates/signalement/signalement.html:117
 #: templates/signalement/suivi_informations.html:15
+#, fuzzy
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: admin/forms.py:18
 msgid "Err_valid_email"
-msgstr ""
+msgstr "L'adresse email est invalide."
 
 #: admin/forms.py:21
 msgid "Password"
-msgstr ""
+msgstr "Mot de passe"
 
 #: admin/forms.py:22 templates/admin/login.html:10
 msgid "log_in"
-msgstr ""
+msgstr "Se connecter"
 
 #: admin/views.py:25
 msgid "invalid_username_or_password"
-msgstr ""
+msgstr "Identifiant ou mot de passe incorect."
 
 #: admin/views.py:51
 msgid "signalement-not-found"
-msgstr ""
+msgstr "Le signalement n'a pas été trouvé."
 
 #: frontend/forms.py:25
 msgid ""
@@ -500,35 +502,4 @@ msgstr ""
 #: templates/signalement/suivi_informations.html:3
 msgid "Détail du signalement"
 msgstr ""
-
-#~ msgid ""
-#~ "Chaque signalement dispose de son propre"
-#~ " système de discussion permettant d'envoyer"
-#~ " et de recevoir des messages. Ces "
-#~ "échanges respectent le choix des "
-#~ "déclarant(e)s <b>s'ils ont souhaité rester "
-#~ "anonymes"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "L'école a désigné des référent(e)s "
-#~ "formé(e)s aux traitements des différents "
-#~ "types de signalement, seuls ces "
-#~ "référent(e)s désigné(e)s seront destinataires "
-#~ "des informations que vous allez leur "
-#~ "adresser par le biais de la "
-#~ "plateforme. Vous aurez la possibilité de"
-#~ " suivre votre signalement et de "
-#~ "communiquer avec le/les référent(es) grâce "
-#~ "au code confidentiel généré par la "
-#~ "plateforme lors de la transmission de"
-#~ " votre signalement, <b>ce code sera à"
-#~ " conserver</b>"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "<b>Tout signalement fera l'objet d'une "
-#~ "analyse rigoureuse et d'un audit interne"
-#~ " détaillé"
-#~ msgstr ""
 
