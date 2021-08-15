@@ -8,23 +8,23 @@
 
 {% block content %}
 
-<h1>{{ _("Bienvenue sur le portail de signalement de l'ESPCI Paris PSL") }}</h1>
+<h1>{{ _("index-bienvenue") }}</h1>
 
-<p>{{ _("Conformément à nos règles éthiques et aux dispositions légales en vigueur la présente plateforme permet des signalements et des échanges sécurisés et est accessible à nos élèves.") }}</p>
+<p>{{ _("index-privacy.") }}</p>
 
 <div class="box">
     <div class="box-title">
         {{ _("IMPORTANT") }}
     </div>
     <div class="box-content">
-        <p>{{ _("Vous avez la possibilité de reporter ici, l'existence de conduites ou de situations contraires à l'intérêt général et dont vous avez eu personnellement connaissance ou dont vous avez été témoin.") }}</p>
-        <p>{{ _("<b>La confidentialité de votre identité</b> sera préservée lors de l'émission de votre signalement, ainsi que durant toute la procédure de traitement de l'alerte.") }}</p>
+        <p>{{ _("index-important") }}</p>
+        <p>{{ _("index-important-2") }}</p>
     </div>
 </div>
 
 <div class="signalement-buttons">
-    <a href="#" id="new-signalement">{{ _("Faire un nouveau signalement") }}</a>
-    <a href="{{ url_for('frontend.suivi')}}">{{ _("Accéder à un signalement existant") }}</a>
+    <a href="#" id="new-signalement">{{ _("nouveau-signalement") }}</a>
+    <a href="{{ url_for('frontend.suivi')}}">{{ _("acceder-signalement") }}</a>
 </div>
 
 <div class="box">
@@ -32,9 +32,9 @@
         {{ _('À SAVOIR') }}
     </div>
     <div class="box-content">
-        <p>{{ _("Chaque signalement dispose de son propre système de discussion permettant d'envoyer et de recevoir des messages. Ces échanges respectent le choix des déclarant(e)s <b>s'ils ont souhaité rester anonymes</b>.") }}</p>
-        <p>{{ _("L'école a désigné des référent(e)s formé(e)s aux traitements des différents types de signalement, seuls ces référent(e)s désigné(e)s seront destinataires des informations que vous allez leur adresser par le biais de la plateforme. Vous aurez la possibilité de suivre votre signalement et de communiquer avec le/les référent(es) grâce au code confidentiel généré par la plateforme lors de la transmission de votre signalement, <b>ce code sera à conserver</b>.") }}</p>
-        <p>{{ _("<b>Tout signalement fera l'objet d'une analyse rigoureuse et d'un audit interne détaillé</b>.") }}</p>
+        <p>{{ _("index-a-savoir") }}</p>
+        <p>{{ _("index-a-savoir-2") }}</p>
+        <p>{{ _("index-a-savoir-3") }}</p>
     </div>
 </div>
 
@@ -47,10 +47,10 @@
         <div class="ns-modal-body">
             <p>{{ _("IMPORTANT") }}</p>
             <p><ul>
-                <li>{{ _("Veuillez noter que votre signalement doit être sérieux et factuel pour être recevable.") }} </li>
-                <li>{{ _("Il est important de relater avec exactitude et sincérité les faits constatés et les déclarations.") }}</li>
-                <li>{{ _("Tout en maintenant une stricte confidentialité, toutes les alertes feront l'objet d'une enquète approfondie et d'un audit interne.") }}</li>
-                <li>{{ _("À la fin de votre rapport, le système générera un code confidentiel que vous devrez conserver afin de pouvoir suivre et accéder au système de messagerie à partir de la page d'accueil") }}</li>
+                <li>{{ _("index-note") }} </li>
+                <li>{{ _("index-note-2") }}</li>
+                <li>{{ _("index-note-3") }}</li>
+                <li>{{ _("index-note-4") }}</li>
             </ul></p>
         </div>
         <div class="ns-modal-footer">
