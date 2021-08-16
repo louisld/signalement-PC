@@ -39,6 +39,8 @@ def create_migrate(app):
 def configure_app(app, config=None):
     app.config.from_object(DefaultConfig)
 
+    app.config.from_pyfile('production.cfg', silent=True)
+
 
 def configure_extensions(app):
     # flask-sqlaclhemy
