@@ -38,7 +38,7 @@ def logout():
 @admin.route('/dashboard')
 @login_required
 def dashboard():
-    signalements_new = Signalement.query.filter_by(statut=SignalementStatut.new).all()
+    signalements_new = Signalement.query.filter_by(statut=SignalementStatut.new).order_by(Signalement.date_signalement.desc()).all()
     return render_template('admin/dashboard.html', signalements_new=signalements_new)
 
 
