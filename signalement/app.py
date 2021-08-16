@@ -28,13 +28,6 @@ def create_app(config=None, app_name=None):
     configure_error_handlers(app)
     configure_cli(app)
 
-    @app.before_request
-    def before_request():
-        session.permanent = True
-        app.permanent_session_lifetime = datetime.timedelta(minutes=20)
-        session.modified = True
-        g.user = current_user
-
     return app
 
 
@@ -89,7 +82,10 @@ def configure_hook(app):
 
     @app.before_request
     def before_request():
-        pass
+        session.permanent = True
+        app.permanent_session_lifetime = datetime.timedelta(minutes=20)
+        session.modified = True
+        g.user = current_user
 
 
 def configure_error_handlers(app):
