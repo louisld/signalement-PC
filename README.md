@@ -23,3 +23,8 @@ Pour nginx : `# apt-get install nginx`
 `$ source venv/bin/activate`
 
 `(venv) $ pip install -r requirements.txt`
+
+### Configuration du module virtualhost apache
+
+
+Voir le fichier `signalement.conf`.
