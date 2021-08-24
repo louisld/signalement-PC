@@ -47,3 +47,43 @@
 .dashboard-name {
     font-size: 1.3em;
 }
+.dashboard-infos-text {
+    padding: 10px;
+}
+.dashboard-signalement-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.dashboard-signalement {
+    width: 100%;
+}
+.dashboard-signalement-statut {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+@media (min-width: 768px) {
+    .dashboard-signalement-container {
+        flex-direction: row-reverse;
+    }
+    .dashboard-signalement-statut {
+        width: 28%;
+        margin-left: 2%;
+    }
+    .dashboard-signalement {
+        width: 70%;
+    }
+}
+.dashboard-signalement-statut-new {
+    background-color: red;
+    color: white;
+}
+.dashboard-signalement-statut-opened {
+    background-color: orange;
+    color: white;
+}
+.dashboard-signalement-statut-closed {
+    background-color: green;
+    color: white;
+}

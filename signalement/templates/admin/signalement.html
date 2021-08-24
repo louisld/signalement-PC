@@ -2,33 +2,55 @@
 
 {% block css %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/admin/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bower_components/components-font-awesome/css/all.min.css') }}">
 {% endblock %}
 
 {% block content %}
 
 <h2>{{ _("Signalement")}} - {{ signalement.categorie }}</h2>
 
-<div class="dashboard-cat">
-    <span class="dashboard-name">{{ signalement.nom }} {{ signalement.prenom }}</span><br/>
-    <b>{{ _("Email") }}</b> : {{ signalement.email }}<br />
-    <b>{{ _("Téléphone") }}</b> : {{ signalement.telephone }}
-</div>
+<div class="dashboard-signalement-container">
+    <div class="dashboard-signalement-statut dashboard-signalement-statut-{{signalement.statut.name}}">
+        <h3>{{ _("Statut") }} : {{ signalement.statut_str[signalement.statut] }}</h3>
+        <p>
+            {# Pas très joli #}
+            {{ _("last-updated")}} : {{ signalement.date_updated }}
+            <br/>
+            {% if not signalement.statut|string == "SignalementStatut.new" %}
+                <a href=""><i class="fas fa-envelope"></i>{{ _("dashbord-change-to-new")}}</a><br/>
+            {% endif %}
+            {% if not signalement.statut|string == "SignalementStatut.opened" %}
+                <a href=""><i class="fas fa-envelope-open"></i>{{ _("dashbord-change-to-opened")}}</a><br/>
+            {% endif %}
+            {% if not signalement.statut|string == "SignalementStatut.closed" %}
+                <a href=""><i class="fas fa-archive"></i>{{ _("dashbord-change-to-closed")}}</a><br/>
+            {% endif %}
+        </p>
+    </div>
+    <div class="dashboard-signalement">
+        <div class="dashboard-cat">
+            <span class="dashboard-name">{{ signalement.nom }} {{ signalement.prenom }}</span><br/>
+            <b>{{ _("Email") }}</b> : {{ signalement.email }}<br />
+            <b>{{ _("Téléphone") }}</b> : {{ signalement.telephone }}
+        </div>
 
-<h3>{{ _("dashboard-description-faits") }}</h3>
+        <h3>{{ _("dashboard-description-faits") }}</h3>
 
-<div class="dashboard-cat">
-    <div class="dashboard-infos"><b>{{ _("dashboard-infos-preoccupation")}}</b><br/> <span class="dashboard-infos-text">{{signalement.preocupation }}</span></div>
-    <div class="dashboard-infos"><b>{{ _("dashboard-infos-date-faits")}}<br/></b> <span class="dashboard-infos-text">{{signalement.date }}</span></div>
-    <div class="dashboard-infos"><b>{{ _("dashboard-infos-lieu")}}</b><br/> <span class="dashboard-infos-text">{{ signalement.lieu }}</span></div>
-    <div class="dashboard-infos"><b>{{ _("dashboard-infos-descritpion")}} :</b><br/> <span class="dashboard-infos-text">{{ signalement.description }}</span></div>
-    <div class="dashboard-infos"><b>{{ _("dashboard-infos-temoin")}} :</b><br/> <span class="dashboard-infos-text">{{ signalement.temoin }}</span></div>
-    <div class="dashboard-infos"><b>{{ _("dashboard-infos-première")}} :</b> <span class="dashboard-infos-text">{{ signalement.premiere }}</span></div>
-</div>
+        <div class="dashboard-cat">
+            <div class="dashboard-infos"><b>{{ _("dashboard-infos-preoccupation")}}</b><br/> <span class="dashboard-infos-text">{{signalement.preocupation }}</span></div>
+            <div class="dashboard-infos"><b>{{ _("dashboard-infos-date-faits")}}<br/></b> <span class="dashboard-infos-text">{{signalement.date }}</span></div>
+            <div class="dashboard-infos"><b>{{ _("dashboard-infos-lieu")}}</b><br/> <span class="dashboard-infos-text">{{ signalement.lieu }}</span></div>
+            <div class="dashboard-infos"><b>{{ _("dashboard-infos-descritpion")}} :</b><br/> <span class="dashboard-infos-text">{{ signalement.description }}</span></div>
+            <div class="dashboard-infos"><b>{{ _("dashboard-infos-temoin")}} :</b><br/> <span class="dashboard-infos-text">{{ signalement.temoin }}</span></div>
+            <div class="dashboard-infos"><b>{{ _("dashboard-infos-première")}} :</b> <span class="dashboard-infos-text">{{ signalement.premiere }}</span></div>
+        </div>
 
-<h3>{{ _("Contact") }}</h3>
+        <h3>{{ _("Contact") }}</h3>
 
-<div class="dashboard-cat">
-    <div class="dashboard-infos"><b>{{ _("dashboard-infos-recontact")}}</b><br/> <span class="dashboard-infos-text">{{ signalement.recontact }}</span></div>
-    <div class="dashboard-infos"><b>{{ _("dashboard-infos-modalite")}}</b><br/> <span class="dashboard-infos-text">{{ signalement.modalite }}</span></div>
+        <div class="dashboard-cat">
+            <div class="dashboard-infos"><b>{{ _("dashboard-infos-recontact")}}</b><br/> <span class="dashboard-infos-text">{{ signalement.recontact }}</span></div>
+            <div class="dashboard-infos"><b>{{ _("dashboard-infos-modalite")}}</b><br/> <span class="dashboard-infos-text">{{ signalement.modalite }}</span></div>
+        </div>
+    </div>
 </div>
 {% endblock %}
