@@ -7,6 +7,8 @@
 
 {% block content %}
 
+<a href="{{ url_for('admin.dashboard') }}"><i class="fas fa-chevron-left"></i>{{ _("return-to-dashboard")}}</a>
+
 <h2>{{ _("Signalement")}} - {{ signalement.categorie }}</h2>
 
 <div class="dashboard-signalement-container">

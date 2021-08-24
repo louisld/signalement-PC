@@ -133,10 +133,12 @@ class Signalement(db.Model):
     date_updated = Column(
         db.DateTime(),
         default=datetime.datetime.utcnow,
-        on_update=datetime.datetime.utcnow
+        onupdate=datetime.datetime.utcnow
     )
 
-    statut_str = {SignalementStatut.new: _("status-new"), SignalementStatut.opened: _("statut-opened"), SignalementStatut.closed: _("statut-closed")}
+    statut_str = {SignalementStatut.new: _("status-new"),
+                  SignalementStatut.opened: _("statut-opened"),
+                  SignalementStatut.closed: _("statut-closed")}
 
     statut = Column(
         db.Enum(SignalementStatut),

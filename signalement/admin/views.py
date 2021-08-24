@@ -41,7 +41,12 @@ def logout():
 @login_required
 def dashboard():
     signalements_new = Signalement.query.filter_by(statut=SignalementStatut.new).order_by(Signalement.date_updated.desc()).all()
-    return render_template('admin/dashboard.html', signalements_new=signalements_new)
+    signalements_opened = Signalement.query.filter_by(statut=SignalementStatut.opened).order_by(Signalement.date_updated.desc()).all()
+    signalements_closed = Signalement.query.filter_by(statut=SignalementStatut.closed).order_by(Signalement.date_updated.desc()).all()
+    return render_template('admin/dashboard.html',
+                           signalements_new=signalements_new,
+                           signalements_opened=signalements_opened,
+                           signalements_closed=signalements_closed)
 
 
 @admin.route('/signalement/<int:id>')
