@@ -17,13 +17,13 @@
             {{ _("last-updated")}} : {{ signalement.date_updated }}
             <br/>
             {% if not signalement.statut|string == "SignalementStatut.new" %}
-                <a href=""><i class="fas fa-envelope"></i>{{ _("dashbord-change-to-new")}}</a><br/>
+                <a href="{{ url_for('admin.signalement_set_new', id=signalement.id) }}"><i class="fas fa-envelope"></i>{{ _("dashbord-change-to-new")}}</a><br/>
             {% endif %}
             {% if not signalement.statut|string == "SignalementStatut.opened" %}
-                <a href=""><i class="fas fa-envelope-open"></i>{{ _("dashbord-change-to-opened")}}</a><br/>
+                <a href="{{ url_for('admin.signalement_set_opened', id=signalement.id) }}"><i class="fas fa-envelope-open"></i>{{ _("dashbord-change-to-opened")}}</a><br/>
             {% endif %}
             {% if not signalement.statut|string == "SignalementStatut.closed" %}
-                <a href=""><i class="fas fa-archive"></i>{{ _("dashbord-change-to-closed")}}</a><br/>
+                <a href="{{ url_for('admin.signalement_set_closed', id=signalement.id) }}"><i class="fas fa-archive"></i>{{ _("dashbord-change-to-closed")}}</a><br/>
             {% endif %}
         </p>
     </div>

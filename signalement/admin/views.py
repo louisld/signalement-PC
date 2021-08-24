@@ -1,9 +1,11 @@
+import datetime
+
 from flask import Blueprint, render_template, flash, \
         url_for, redirect
 from flask_login import login_required, logout_user, current_user, login_user
 from flask_babel import lazy_gettext as _
 
-from signalement.extensions import login_manager
+from signalement.extensions import login_manager, db
 from signalement.admin.forms import LoginForm
 from signalement.admin.models import User
 from signalement.frontend.models import Signalement, SignalementStatut
@@ -47,10 +49,48 @@ def dashboard():
 def signalement(id):
     signalement = Signalement.query.get(id)
     if not signalement:
-        print("PAs vu")
         flash(_("signalement-not-found"))
         return redirect(url_for('admin.dashboard'))
     return render_template('admin/signalement.html', signalement=signalement)
+
+
+@admin.route('/signalement/set_new/<int:id>')
+@login_required
+def signalement_set_new(id):
+    signalement = Signalement.query.get(id)
+    if not signalement:
+        flash(_("signalement-not-found"))
+        return redirect(url_for('admin.dashboard'))
+    signalement.statut = SignalementStatut.new
+    db.session.commit()
+    flash(_("signalement-set-new"))
+    return redirect(url_for('admin.signalement', id=id))
+
+
+@admin.route('/signalement/set_opened/<int:id>')
+@login_required
+def signalement_set_opened(id):
+    signalement = Signalement.query.get(id)
+    if not signalement:
+        flash(_("signalement-not-found"))
+        return redirect(url_for('admin.dashboard'))
+    signalement.statut = SignalementStatut.opened
+    db.session.commit()
+    flash(_("signalement-set-opened"))
+    return redirect(url_for('admin.signalement', id=id))
+
+
+@admin.route('/signalement/set_closed/<int:id>')
+@login_required
+def signalement_set_closed(id):
+    signalement = Signalement.query.get(id)
+    if not signalement:
+        flash(_("signalement-not-found"))
+        return redirect(url_for('admin.dashboard'))
+    signalement.statut = SignalementStatut.closed
+    db.session.commit()
+    flash(_("signalement-set-closed"))
+    return redirect(url_for('admin.signalement', id=id))
 
 
 @login_manager.user_loader
