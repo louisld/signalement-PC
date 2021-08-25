@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-08-15 22:41+0200\n"
+"POT-Creation-Date: 2021-08-25 10:52+0200\n"
 "PO-Revision-Date: 2021-07-09 09:45+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -18,451 +18,520 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 
-#: signalement/admin/forms.py:15 signalement/templates/admin/signalement.html:6
-#: signalement/templates/signalement/signalement.html:112
-#: signalement/templates/signalement/suivi_informations.html:15
+#: admin/forms.py:15 templates/admin/signalement.html:35
+#: templates/signalement/signalement.html:112
+#: templates/signalement/suivi_informations.html:15
 msgid "Email"
 msgstr ""
 
-#: signalement/admin/forms.py:18
+#: admin/forms.py:18
 msgid "Err_valid_email"
 msgstr ""
 
-#: signalement/admin/forms.py:21
+#: admin/forms.py:21
 msgid "Password"
 msgstr ""
 
-#: signalement/admin/forms.py:22 signalement/templates/admin/login.html:10
+#: admin/forms.py:22 templates/admin/login.html:10
 msgid "log_in"
 msgstr ""
 
-#: signalement/admin/views.py:25
+#: admin/views.py:27
 msgid "invalid_username_or_password"
 msgstr ""
 
-#: signalement/admin/views.py:51
+#: admin/views.py:57 admin/views.py:67 admin/views.py:80 admin/views.py:93
 msgid "signalement-not-found"
 msgstr ""
 
-#: signalement/frontend/forms.py:25
+#: admin/views.py:71
+msgid "signalement-set-new"
+msgstr ""
+
+#: admin/views.py:84
+msgid "signalement-set-opened"
+msgstr ""
+
+#: admin/views.py:97
+msgid "signalement-set-closed"
+msgstr ""
+
+#: frontend/forms.py:25
 msgid ""
 " Je confirme vous transmettre mon signalement de manière désintéressée et"
 " de bonne foi.*"
 msgstr ""
 
-#: signalement/frontend/forms.py:32
+#: frontend/forms.py:32
 msgid "Numéro de suivi :"
 msgstr ""
 
-#: signalement/frontend/forms.py:33
+#: frontend/forms.py:33
 msgid "Accéder"
 msgstr ""
 
-#: signalement/frontend/models.py:25
+#: frontend/models.py:25
 msgid "Agression sexuelle"
 msgstr ""
 
-#: signalement/frontend/models.py:26
+#: frontend/models.py:26
 msgid "Viol"
 msgstr ""
 
-#: signalement/frontend/models.py:27
+#: frontend/models.py:27
 msgid "Harcèlement moral"
 msgstr ""
 
-#: signalement/frontend/models.py:28
+#: frontend/models.py:28
 msgid "Harcèlement sexuel"
 msgstr ""
 
-#: signalement/frontend/models.py:29
+#: frontend/models.py:29
 msgid "Cyber harcèlement"
 msgstr ""
 
-#: signalement/frontend/models.py:30
+#: frontend/models.py:30
 msgid "Agissement sexiste"
 msgstr ""
 
-#: signalement/frontend/models.py:31
+#: frontend/models.py:31
 msgid "Discriminations"
 msgstr ""
 
-#: signalement/frontend/models.py:32
+#: frontend/models.py:32
 msgid "Violences"
 msgstr ""
 
-#: signalement/frontend/models.py:33
+#: frontend/models.py:33
 msgid "Je ne sais pas/ne veux pas catégoriser mon signalement"
 msgstr ""
 
-#: signalement/frontend/models.py:37
-#: signalement/templates/admin/signalement.html:3
-#: signalement/templates/signalement/signalement.html:109
-#: signalement/templates/signalement/suivi_informations.html:11
+#: frontend/models.py:37 templates/signalement/signalement.html:109
+#: templates/signalement/suivi_informations.html:11
 msgid "Catégorie"
 msgstr ""
 
-#: signalement/frontend/models.py:43
+#: frontend/models.py:43
 msgid "Nom*"
 msgstr ""
 
-#: signalement/frontend/models.py:48
+#: frontend/models.py:48
 msgid "Prénom*"
 msgstr ""
 
-#: signalement/frontend/models.py:53
+#: frontend/models.py:53
 msgid "Email*"
 msgstr ""
 
-#: signalement/frontend/models.py:59
-#: signalement/templates/admin/signalement.html:7
-#: signalement/templates/signalement/signalement.html:113
-#: signalement/templates/signalement/suivi_informations.html:16
+#: frontend/models.py:59 templates/admin/signalement.html:36
+#: templates/signalement/signalement.html:113
+#: templates/signalement/suivi_informations.html:16
 msgid "Téléphone"
 msgstr ""
 
-#: signalement/frontend/models.py:68
+#: frontend/models.py:68
 msgid "Je souhaite rester anonyme pour faire ce signalement"
 msgstr ""
 
-#: signalement/frontend/models.py:73
+#: frontend/models.py:73
 msgid "Quelle est votre préoccupation ?*"
 msgstr ""
 
-#: signalement/frontend/models.py:78
-#: signalement/templates/admin/signalement.html:9
-#: signalement/templates/signalement/signalement.html:115
-#: signalement/templates/signalement/suivi_informations.html:18
+#: frontend/models.py:78 templates/signalement/signalement.html:115
+#: templates/signalement/suivi_informations.html:18
 msgid "À quelle date se sont déroulés les faits ?"
 msgstr ""
 
-#: signalement/frontend/models.py:83
+#: frontend/models.py:83
 msgid "Où se sont déroulés les faits ?*"
 msgstr ""
 
-#: signalement/frontend/models.py:88
+#: frontend/models.py:88
 msgid "Décrivez précisement la situation ou les faits.*"
 msgstr ""
 
-#: signalement/frontend/models.py:93
+#: frontend/models.py:93
 msgid ""
 "Y a-t-il eu des témoins / d'autres témoins de la situation ? Si oui, "
 "précisez leur identité si vous la connaissez."
 msgstr ""
 
-#: signalement/frontend/models.py:104
+#: frontend/models.py:104
 msgid "Est-ce la première fois que cette situation est observée ?*"
 msgstr ""
 
-#: signalement/frontend/models.py:108
+#: frontend/models.py:108
 msgid "Avez-vous des fichiers en lien avec votre signalement à nous transmettre ?"
 msgstr ""
 
-#: signalement/frontend/models.py:117
+#: frontend/models.py:117
 msgid "Souhaitez-vous être recontacté par la référence écoute ?*"
 msgstr ""
 
-#: signalement/frontend/models.py:121
-#: signalement/templates/admin/signalement.html:15
-#: signalement/templates/signalement/signalement.html:121
-#: signalement/templates/signalement/suivi_informations.html:24
+#: frontend/models.py:121 templates/signalement/signalement.html:121
+#: templates/signalement/suivi_informations.html:24
 msgid ""
 "Si vous avez répondu « oui » à la question précédente n’hésitez pas à "
 "nous préciser les modalités de prise de contact privilégié et les "
 "horaires souhaités."
 msgstr ""
 
-#: signalement/frontend/views.py:39
+#: frontend/models.py:139
+msgid "status-new"
+msgstr ""
+
+#: frontend/models.py:140
+msgid "statut-opened"
+msgstr ""
+
+#: frontend/models.py:141
+msgid "statut-closed"
+msgstr ""
+
+#: frontend/views.py:39
 msgid "Ce signalement n'a pas été trouvé dans la base de donnée."
 msgstr ""
 
-#: signalement/templates/index.html:3
+#: templates/index.html:3
 msgid "Accueil"
 msgstr ""
 
-#: signalement/templates/index.html:11
+#: templates/index.html:11
 msgid "index-bienvenue"
 msgstr ""
 
-#: signalement/templates/index.html:13
+#: templates/index.html:13
 msgid "index-privacy."
 msgstr ""
 
-#: signalement/templates/index.html:17 signalement/templates/index.html:48
+#: templates/index.html:17 templates/index.html:48
 msgid "IMPORTANT"
 msgstr ""
 
-#: signalement/templates/index.html:20
+#: templates/index.html:20
 msgid "index-important"
 msgstr ""
 
-#: signalement/templates/index.html:21
+#: templates/index.html:21
 msgid "index-important-2"
 msgstr ""
 
-#: signalement/templates/index.html:26
+#: templates/index.html:26
 msgid "nouveau-signalement"
 msgstr ""
 
-#: signalement/templates/index.html:27
+#: templates/index.html:27
 msgid "acceder-signalement"
 msgstr ""
 
-#: signalement/templates/index.html:32
+#: templates/index.html:32
 msgid "À SAVOIR"
 msgstr ""
 
-#: signalement/templates/index.html:35
+#: templates/index.html:35
 msgid "index-a-savoir"
 msgstr ""
 
-#: signalement/templates/index.html:36
+#: templates/index.html:36
 msgid "index-a-savoir-2"
 msgstr ""
 
-#: signalement/templates/index.html:37
+#: templates/index.html:37
 msgid "index-a-savoir-3"
 msgstr ""
 
-#: signalement/templates/index.html:45
+#: templates/index.html:45
 msgid "Note importante"
 msgstr ""
 
-#: signalement/templates/index.html:50
+#: templates/index.html:50
 msgid "index-note"
 msgstr ""
 
-#: signalement/templates/index.html:51
+#: templates/index.html:51
 msgid "index-note-2"
 msgstr ""
 
-#: signalement/templates/index.html:52
+#: templates/index.html:52
 msgid "index-note-3"
 msgstr ""
 
-#: signalement/templates/index.html:53
+#: templates/index.html:53
 msgid "index-note-4"
 msgstr ""
 
-#: signalement/templates/index.html:57
+#: templates/index.html:57
 msgid "Accepter"
 msgstr ""
 
-#: signalement/templates/index.html:58
+#: templates/index.html:58
 msgid "Fermer"
 msgstr ""
 
-#: signalement/templates/admin/dashboard.html:10
+#: templates/admin/dashboard.html:10
 msgid "dashboard_title"
 msgstr ""
 
-#: signalement/templates/admin/dashboard.html:13
+#: templates/admin/dashboard.html:13
 msgid "dashboard_signalement_new"
 msgstr ""
 
-#: signalement/templates/admin/dashboard.html:19
-#: signalement/templates/admin/dashboard.html:45
-#: signalement/templates/admin/dashboard.html:71
+#: templates/admin/dashboard.html:19 templates/admin/dashboard.html:45
+#: templates/admin/dashboard.html:71
 msgid "dashboard-date"
 msgstr ""
 
-#: signalement/templates/admin/dashboard.html:20
-#: signalement/templates/admin/dashboard.html:46
-#: signalement/templates/admin/dashboard.html:72
-msgid "dashboard-sous-categorie"
+#: templates/admin/dashboard.html:20 templates/admin/dashboard.html:46
+#: templates/admin/dashboard.html:72
+msgid "dashboard-categorie"
 msgstr ""
 
-#: signalement/templates/admin/dashboard.html:21
-#: signalement/templates/admin/dashboard.html:47
-#: signalement/templates/admin/dashboard.html:73
+#: templates/admin/dashboard.html:21 templates/admin/dashboard.html:47
+#: templates/admin/dashboard.html:73
 msgid "dashboard-preocupation"
 msgstr ""
 
-#: signalement/templates/admin/dashboard.html:22
-#: signalement/templates/admin/dashboard.html:48
-#: signalement/templates/admin/dashboard.html:74
+#: templates/admin/dashboard.html:22 templates/admin/dashboard.html:48
+#: templates/admin/dashboard.html:74
 msgid "dashboard-date-fait"
 msgstr ""
 
-#: signalement/templates/admin/dashboard.html:39
+#: templates/admin/dashboard.html:39
 msgid "dashboard_signalement_open"
 msgstr ""
 
-#: signalement/templates/admin/dashboard.html:65
+#: templates/admin/dashboard.html:65
 msgid "dashboard_signalement_close"
 msgstr ""
 
-#: signalement/templates/admin/signalement.html:4
-#: signalement/templates/signalement/signalement.html:110
-#: signalement/templates/signalement/suivi_informations.html:13
-msgid "Nom"
+#: templates/admin/signalement.html:10
+msgid "return-to-dashboard"
 msgstr ""
 
-#: signalement/templates/admin/signalement.html:5
-#: signalement/templates/signalement/signalement.html:111
-#: signalement/templates/signalement/suivi_informations.html:14
-msgid "Prénom"
-msgstr ""
-
-#: signalement/templates/admin/signalement.html:8
-#: signalement/templates/signalement/signalement.html:114
-#: signalement/templates/signalement/suivi_informations.html:17
-msgid "Quelle est votre préoccupation ?"
-msgstr ""
-
-#: signalement/templates/admin/signalement.html:10
-#: signalement/templates/signalement/signalement.html:116
-#: signalement/templates/signalement/suivi_informations.html:19
-msgid "Où se sont déroulés les faits ?"
-msgstr ""
-
-#: signalement/templates/admin/signalement.html:11
-#: signalement/templates/signalement/signalement.html:117
-#: signalement/templates/signalement/suivi_informations.html:20
-msgid "Décrivez précisement la situation ou les faits"
-msgstr ""
-
-#: signalement/templates/admin/signalement.html:12
-#: signalement/templates/signalement/signalement.html:118
-#: signalement/templates/signalement/suivi_informations.html:21
-msgid ""
-"Y a-t-il eu des témoins / d’autres témoins de la situation ? Si oui, "
-"précisez leur identité si vous la connaissez"
-msgstr ""
-
-#: signalement/templates/admin/signalement.html:13
-#: signalement/templates/signalement/signalement.html:119
-#: signalement/templates/signalement/suivi_informations.html:22
-msgid "Est-ce la première fois que cette situation est observée ?"
-msgstr ""
-
-#: signalement/templates/admin/signalement.html:14
-#: signalement/templates/signalement/signalement.html:120
-#: signalement/templates/signalement/suivi_informations.html:23
-msgid "Souhaitez-vous être recontacté par la référente écoute ?"
-msgstr ""
-
-#: signalement/templates/errors/404.html:3
-msgid "Erreur"
-msgstr ""
-
-#: signalement/templates/layouts/base.html:6
-msgid "Signalement ESPCI"
-msgstr ""
-
-#: signalement/templates/layouts/base.html:15
-#: signalement/templates/signalement/signalement.html:3
+#: templates/admin/signalement.html:12 templates/layouts/base.html:15
+#: templates/signalement/signalement.html:3
 msgid "Signalement"
 msgstr ""
 
-#: signalement/templates/signalement/confirmation.html:3
+#: templates/admin/signalement.html:16
+msgid "Statut"
+msgstr ""
+
+#: templates/admin/signalement.html:19
+msgid "last-updated"
+msgstr ""
+
+#: templates/admin/signalement.html:22
+msgid "dashbord-change-to-new"
+msgstr ""
+
+#: templates/admin/signalement.html:25
+msgid "dashbord-change-to-opened"
+msgstr ""
+
+#: templates/admin/signalement.html:28
+msgid "dashbord-change-to-closed"
+msgstr ""
+
+#: templates/admin/signalement.html:39
+msgid "dashboard-description-faits"
+msgstr ""
+
+#: templates/admin/signalement.html:42
+msgid "dashboard-infos-preoccupation"
+msgstr ""
+
+#: templates/admin/signalement.html:43
+msgid "dashboard-infos-date-faits"
+msgstr ""
+
+#: templates/admin/signalement.html:44
+msgid "dashboard-infos-lieu"
+msgstr ""
+
+#: templates/admin/signalement.html:45
+msgid "dashboard-infos-descritpion"
+msgstr ""
+
+#: templates/admin/signalement.html:46
+msgid "dashboard-infos-temoin"
+msgstr ""
+
+#: templates/admin/signalement.html:47
+msgid "dashboard-infos-première"
+msgstr ""
+
+#: templates/admin/signalement.html:50
+msgid "Contact"
+msgstr ""
+
+#: templates/admin/signalement.html:53
+msgid "dashboard-infos-recontact"
+msgstr ""
+
+#: templates/admin/signalement.html:54
+msgid "dashboard-infos-modalite"
+msgstr ""
+
+#: templates/errors/404.html:3
+msgid "Erreur"
+msgstr ""
+
+#: templates/layouts/base.html:6
+msgid "Signalement ESPCI"
+msgstr ""
+
+#: templates/signalement/confirmation.html:3
 msgid "Signalement enregistré"
 msgstr ""
 
-#: signalement/templates/signalement/confirmation.html:11
+#: templates/signalement/confirmation.html:11
 msgid "Votre signalement a bien été enregistré."
 msgstr ""
 
-#: signalement/templates/signalement/confirmation.html:13
+#: templates/signalement/confirmation.html:13
 msgid "Votre numéro de suivi est :"
 msgstr ""
 
-#: signalement/templates/signalement/confirmation.html:20
+#: templates/signalement/confirmation.html:20
 msgid ""
 "Veuillez gardez précieusement ce numéro, il vous permettra d'accéder à "
 "votre signalement dans le futur."
 msgstr ""
 
-#: signalement/templates/signalement/confirmation.html:22
+#: templates/signalement/confirmation.html:22
 msgid "Retournez à l'accueil "
 msgstr ""
 
-#: signalement/templates/signalement/confirmation.html:22
+#: templates/signalement/confirmation.html:22
 msgid "ici"
 msgstr ""
 
-#: signalement/templates/signalement/signalement.html:16
+#: templates/signalement/signalement.html:16
 msgid "Initialiser"
 msgstr ""
 
-#: signalement/templates/signalement/signalement.html:17
+#: templates/signalement/signalement.html:17
 msgid "Identifier"
 msgstr ""
 
-#: signalement/templates/signalement/signalement.html:18
+#: templates/signalement/signalement.html:18
 msgid "Décrire"
 msgstr ""
 
-#: signalement/templates/signalement/signalement.html:19
+#: templates/signalement/signalement.html:19
 msgid "Transmettre"
 msgstr ""
 
-#: signalement/templates/signalement/signalement.html:28
+#: templates/signalement/signalement.html:28
 msgid "Type de signalement"
 msgstr ""
 
-#: signalement/templates/signalement/signalement.html:34
+#: templates/signalement/signalement.html:34
 msgid "Description_agression"
 msgstr ""
 
-#: signalement/templates/signalement/signalement.html:35
+#: templates/signalement/signalement.html:35
 msgid "Description_viol"
 msgstr ""
 
-#: signalement/templates/signalement/signalement.html:36
+#: templates/signalement/signalement.html:36
 msgid "Description_harcelement_moral"
 msgstr ""
 
-#: signalement/templates/signalement/signalement.html:37
+#: templates/signalement/signalement.html:37
 msgid "Description_harcelement_sexuel"
 msgstr ""
 
-#: signalement/templates/signalement/signalement.html:38
+#: templates/signalement/signalement.html:38
 msgid "Description_cyber_harcelement"
 msgstr ""
 
-#: signalement/templates/signalement/signalement.html:39
+#: templates/signalement/signalement.html:39
 msgid "Description_agissement_sexiste"
 msgstr ""
 
-#: signalement/templates/signalement/signalement.html:40
+#: templates/signalement/signalement.html:40
 msgid "Description_discrimination"
 msgstr ""
 
-#: signalement/templates/signalement/signalement.html:41
+#: templates/signalement/signalement.html:41
 msgid "Description_violences"
 msgstr ""
 
-#: signalement/templates/signalement/signalement.html:42
+#: templates/signalement/signalement.html:42
 msgid "Description_jenesaispas"
 msgstr ""
 
-#: signalement/templates/signalement/signalement.html:66
+#: templates/signalement/signalement.html:66
 msgid "desc_anonymat"
 msgstr ""
 
-#: signalement/templates/signalement/signalement.html:108
+#: templates/signalement/signalement.html:108
 msgid "Récapitulatif"
 msgstr ""
 
-#: signalement/templates/signalement/suivi.html:3
+#: templates/signalement/signalement.html:110
+#: templates/signalement/suivi_informations.html:13
+msgid "Nom"
+msgstr ""
+
+#: templates/signalement/signalement.html:111
+#: templates/signalement/suivi_informations.html:14
+msgid "Prénom"
+msgstr ""
+
+#: templates/signalement/signalement.html:114
+#: templates/signalement/suivi_informations.html:17
+msgid "Quelle est votre préoccupation ?"
+msgstr ""
+
+#: templates/signalement/signalement.html:116
+#: templates/signalement/suivi_informations.html:19
+msgid "Où se sont déroulés les faits ?"
+msgstr ""
+
+#: templates/signalement/signalement.html:117
+#: templates/signalement/suivi_informations.html:20
+msgid "Décrivez précisement la situation ou les faits"
+msgstr ""
+
+#: templates/signalement/signalement.html:118
+#: templates/signalement/suivi_informations.html:21
+msgid ""
+"Y a-t-il eu des témoins / d’autres témoins de la situation ? Si oui, "
+"précisez leur identité si vous la connaissez"
+msgstr ""
+
+#: templates/signalement/signalement.html:119
+#: templates/signalement/suivi_informations.html:22
+msgid "Est-ce la première fois que cette situation est observée ?"
+msgstr ""
+
+#: templates/signalement/signalement.html:120
+#: templates/signalement/suivi_informations.html:23
+msgid "Souhaitez-vous être recontacté par la référente écoute ?"
+msgstr ""
+
+#: templates/signalement/suivi.html:3
 msgid "Accéder à un signalement"
 msgstr ""
 
-#: signalement/templates/signalement/suivi.html:11
+#: templates/signalement/suivi.html:11
 msgid "Accès à un signalement enregistré"
 msgstr ""
 
-#: signalement/templates/signalement/suivi.html:21
+#: templates/signalement/suivi.html:21
 msgid ""
 "Pour accéder à un signalement, vous avez besoin du numéro de signalement "
 "qui vous a été donné à la fin de l'enregistrement de celui-ci."
 msgstr ""
 
-#: signalement/templates/signalement/suivi_informations.html:3
+#: templates/signalement/suivi_informations.html:3
 msgid "Détail du signalement"
 msgstr ""
 
-#: signalement/templates/signalement/suivi_informations.html:12
+#: templates/signalement/suivi_informations.html:12
 msgid "Sous-catégorie"
 msgstr ""
 
@@ -603,5 +672,8 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "index-important-2."
+#~ msgstr ""
+
+#~ msgid "dashboard-sous-categorie"
 #~ msgstr ""
 
