@@ -463,39 +463,58 @@ msgstr "Type de signalement"
 
 #: templates/signalement/signalement.html:34
 msgid "Description_agression"
-msgstr ""
+msgstr "Contact physique avec une partie de votre corps (seins, sexe,"
+"fesses, bouche, entre les cuisses) dont vous avez été victime sous la contrainte,  "
+"ou sous menace, ou par surprise ou violence"
 
 #: templates/signalement/signalement.html:35
 msgid "Description_viol"
-msgstr ""
+msgstr "Acte de pénétration sexuelle, de quelque nature qu'il soit, commis sur une"
+"personne par violence, ou contrainte, ou menace ou surprise."
 
 #: templates/signalement/signalement.html:36
 msgid "Description_harcelement_moral"
-msgstr ""
+msgstr "Etre victime d'agissements répétés susceptibles d'entraîner, pour la personne"
+"qui les subit, une dégradation de ses conditions de travail pouvant aboutir à une " 
+"atteinte à ses droits et à sa dignité, une altération de sa santé physique ou mentale,"
+" ou une menace pour son évolution professionnelle"
 
 #: templates/signalement/signalement.html:37
 msgid "Description_harcelement_sexuel"
-msgstr ""
+msgstr "Etre victime d'un comportement non désiré, à connotation sexuelle ou physique,"
+" verbal ou non verbal, qui a pour objet ou pour effet de porter atteinte à la dignité "
+"de la personne, ou de créer un environnement intimidant, ou hostile, ou dégradant, "
+"ou humiliant ou offensant."
 
 #: templates/signalement/signalement.html:38
 msgid "Description_cyber_harcelement"
-msgstr ""
+msgstr "Le harcèlement en ligne est un harcèlement s'effectuant via internet (sur un "
+"réseau social, un forum, un jeu vidéo multijoueurs, un blog...). Etre vicitme de propos "
+"ou de comportements répétés ayant pour but ou effet une dégradation des conditions de "
+"vie (dégradation de la santé physique ou mentale de la personne harcelée)"
 
 #: templates/signalement/signalement.html:39
 msgid "Description_agissement_sexiste"
-msgstr ""
+msgstr "Subir un comportement non désiré, à connotation sexuelle " 
+" ou physique, verbal ou non verbal, qui a pour objet ou pour effet de porter atteinte à la " 
+"dignité de la personne ou de créer un environnement intimidant, ou hostile, ou dégradant, " 
+"ou humiliant ou offensant."
 
 #: templates/signalement/signalement.html:40
 msgid "Description_discrimination"
-msgstr ""
+msgstr "Subir un traitement défavorable qui est fondé sur un critère défini par la loi (sexe, âge, handicap…)."
+" Constitue également une discrimination toute distinction opérée entre les personnes " 
+"parce qu’elles ont subi ou refusé de subir des faits de bizutage ou témoigné de tels faits. "
 
 #: templates/signalement/signalement.html:41
 msgid "Description_violences"
-msgstr ""
+msgstr " Etre victime d'un acte délibéré ou non, provoquant un trouble physique ou moral " 
+"comportant des conséquences dommageables pour sa personne ou pour ses biens."
 
 #: templates/signalement/signalement.html:42
 msgid "Description_jenesaispas"
-msgstr ""
+msgstr "Si ton signalement ne correspond à aucune des catégories précédentes ou si tu ne "
+"sais pas à laquelle elle appartient tu peux chosir cette catégorie."
 
 #: templates/signalement/signalement.html:66
 msgid "desc_anonymat"
