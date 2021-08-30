@@ -164,19 +164,20 @@ msgid "Est-ce la première fois que cette situation est observée ?*"
 msgstr ""
 
 #: frontend/models.py:108
-msgid "Avez-vous des fichiers en lien avec votre signalement à nous transmettre ?"
+msgid "Avez-vous des fichiers en lien avec votre signalement à nous transmettre ? (utilisez .zip si vous en avez plusieurs)"
 msgstr ""
 
 #: frontend/models.py:117
-msgid "Souhaitez-vous être recontacté par la référence écoute ?*"
+msgid "Souhaitez-vous être recontacté par la personne qui lira votre signalement ?* Discuter avec la victime/témoin permet au "
+"BDE de prendre leurs avis en compte lors de la prise de décision, cependant on comprend tout à fait que vous n'ayer plus envie d'en entendre parler. "
 msgstr ""
 
 #: frontend/models.py:121 templates/signalement/signalement.html:121
 #: templates/signalement/suivi_informations.html:24
 msgid ""
 "Si vous avez répondu « oui » à la question précédente n’hésitez pas à "
-"nous préciser les modalités de prise de contact privilégié et les "
-"horaires souhaités."
+"nous préciser les modalités de prise de contact (mail, facebook, en vrai,..)."
+"Si vous voulez être recontacté par quelqu'un en particulier ou ne pas être contacté par quelqu"un n'hésitez pas à le préciser. "
 msgstr ""
 
 #: frontend/models.py:139
@@ -201,14 +202,14 @@ msgstr "Accueil"
 
 #: templates/index.html:11
 msgid "index-bienvenue"
-msgstr "Bienvenue sur le portail de signalement de l'ESPCI Paris PSL"
+msgstr "Bienvenue sur le portail de signalement du BDE de l'ESPCI Paris PSL"
 
 #: templates/index.html:13
 msgid "index-privacy."
 msgstr ""
-"Conformément à nos règles éthiques et aux dispositions légales en vigueur"
-" la présente plateforme permet des signalements et des échanges sécurisés"
-" et est accessible à nos élèves."
+"Conformément aux règles éthiques du BDE et aux dispositions légales en vigueur"
+" la présente plateforme permet des signalements sécurisés"
+" et est accessible à aux élèves."
 
 #: templates/index.html:17 templates/index.html:48
 msgid "IMPORTANT"
@@ -224,7 +225,7 @@ msgstr ""
 #: templates/index.html:21
 msgid "index-important-2"
 msgstr ""
-"La confidentialité de votre identité sera préservée lors de l'émission de"
+"Si vous le demandez, la confidentialité de votre identité sera préservée lors de l'émission de"
 " votre signalement, ainsi que durant toute la procédure de traitement de "
 "l'alerte."
 
@@ -243,26 +244,25 @@ msgstr "À SAVOIR"
 #: templates/index.html:35
 msgid "index-a-savoir"
 msgstr ""
-"Chaque signalement dispose de son propre système de discussion permettant"
-" d'envoyer et de recevoir des messages. Ces échanges respectent le choix "
-"des déclarant(e)s <b>s'ils ont souhaité rester anonymes</b>."
+"Les signalements respectent le choix "
+"des déclarant.e.s <b>s'ils ont souhaité rester anonymes</b>."
 
 #: templates/index.html:36
 msgid "index-a-savoir-2"
 msgstr ""
-"L'école a désigné des référent(e)s formé(e)s aux traitements des "
-"différents types de signalement, seuls ces référent(e)s désigné(e)s "
+"Le BDE a désigné des référent.e.s aux traitements des "
+" signalement, seuls ces référent.e.s désigné.e.s "
 "seront destinataires des informations que vous allez leur adresser par le"
-" biais de la plateforme. Vous aurez la possibilité de suivre votre "
-"signalement et de communiquer avec le/les référent(es) grâce au code "
+" biais de la plateforme. Vous aurez la possibilité de suivre l'état de traitement de votre "
+"signalement grâce au code "
 "confidentiel généré par la plateforme lors de la transmission de votre "
 "signalement, <b>ce code sera à conserver</b>."
 
 #: templates/index.html:37
 msgid "index-a-savoir-3"
 msgstr ""
-"<b>Tout signalement fera l'objet d'une analyse rigoureuse et d'un audit "
-"interne détaillé</b>."
+"<b>Tout signalement fera l'objet d'un traitement rigoureux et de discussions "
+"internes de façon à réagir au mieux</b>."
 
 #: templates/index.html:45
 msgid "Note importante"
@@ -271,27 +271,25 @@ msgstr "Note importante"
 #: templates/index.html:50
 msgid "index-note"
 msgstr ""
-"Veuillez noter que votre signalement doit être sérieux et factuel pour "
-"être recevable. "
+"Plus le signalement est factuel et détaillé plus il sera simple à traiter"
 
 #: templates/index.html:51
 msgid "index-note-2"
 msgstr ""
-"Il est important de relater avec exactitude et sincérité les faits "
-"constatés et les déclarations."
+"."
 
 #: templates/index.html:52
 msgid "index-note-3"
 msgstr ""
 "Tout en maintenant une stricte confidentialité, toutes les alertes feront"
-" l'objet d'une enquète approfondie et d'un audit interne."
+" l'objet d'un traitement rigoureux et de discussions "
+"internes de manière à réagir au mieux."
 
 #: templates/index.html:53
 msgid "index-note-4"
 msgstr ""
 "À la fin de votre rapport, le système générera un code confidentiel que "
-"vous devrez conserver afin de pouvoir suivre et accéder au système de "
-"messagerie à partir de la page d'accueil."
+"vous devrez conserver afin de pouvoir suivre votre signalement à partir de la page d'accueil."
 
 #: templates/index.html:57
 msgid "Accepter"
@@ -465,7 +463,7 @@ msgstr "Type de signalement"
 msgid "Description_agression"
 msgstr "Contact physique avec une partie de votre corps (seins, sexe,"
 "fesses, bouche, entre les cuisses) dont vous avez été victime sous la contrainte,  "
-"ou sous menace, ou par surprise ou violence"
+"ou sous menace, ou par surprise ou violence."
 
 #: templates/signalement/signalement.html:35
 msgid "Description_viol"
@@ -476,8 +474,7 @@ msgstr "Acte de pénétration sexuelle, de quelque nature qu'il soit, commis sur
 msgid "Description_harcelement_moral"
 msgstr "Etre victime d'agissements répétés susceptibles d'entraîner, pour la personne"
 "qui les subit, une dégradation de ses conditions de travail pouvant aboutir à une " 
-"atteinte à ses droits et à sa dignité, une altération de sa santé physique ou mentale,"
-" ou une menace pour son évolution professionnelle"
+"atteinte à ses droits et à sa dignité, une altération de sa santé physique ou mentale."
 
 #: templates/signalement/signalement.html:37
 msgid "Description_harcelement_sexuel"
@@ -563,7 +560,7 @@ msgstr ""
 
 #: templates/signalement/signalement.html:120
 #: templates/signalement/suivi_informations.html:23
-msgid "Souhaitez-vous être recontacté par la référente écoute ?"
+msgid "Souhaitez-vous être recontacté par le/la référent.e écoute ?"
 msgstr ""
 
 #: templates/signalement/suivi.html:3
