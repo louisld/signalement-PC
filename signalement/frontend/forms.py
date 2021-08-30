@@ -19,7 +19,7 @@ class SForm(ModelForm):
     class Meta:
         model = Signalement
 
-    fichier = FileField(None)
+    fichier = FileField(_("Avez-vous des fichiers en lien avec votre signalement à nous transmettre ?"))
 
     # Transmettre
     confirmation = BooleanField(_(" Je confirme vous transmettre mon signalement de manière désintéressée et de bonne foi.*"))
