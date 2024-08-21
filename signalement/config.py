@@ -11,7 +11,7 @@ class BaseConfig(object):
     DEBUG = False
     TESTING = True
 
-    ADMINS = ['louisldthesamui@gmail.com']
+    ADMINS = ['email@example.com]
 
     SECRET_KEY = "rejhbviuzreghéç_hoYGF7FGI8hzf"
 
